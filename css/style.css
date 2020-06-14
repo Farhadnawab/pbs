@@ -1,29 +1,29 @@
 @font-face {
-    font-family: 'circularrstd';
-    src: url('fonts/CircularStd-Book.woff2') format('woff2'),
-        url('fonts/CircularStd-Book.woff') format('woff');
+    font-family: 'gilroy';
+    src: url('fonts/gilroy-regular-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
-    font-family: 'circularrstd';
-    src: url('fonts/CircularStd-Bold.woff2') format('woff2'),
-        url('fonts/CircularStd-Bold.woff') format('woff');
+    font-family: 'gilroy';
+    src: url('fonts/gilroy-bold-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
-    font-family: 'circularrstd';
-    src: url('fonts/CircularStd-Medium.woff2') format('woff2'),
-        url('fonts/CircularStd-Medium.woff') format('woff');
-    font-weight: 500;
+    font-family: 'gilroy';
+    src: url('fonts/gilroy-light-webfont.woff2') format('woff2'),
+        url('fonts/gilroy-light-webfont.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
 }
 
 
 
 :root{
-    --font-circularrstd: 'circularrstd', sans-serif;
+    --font-gilroy: 'gilroy', sans-serif;
     --primary: #00306C;
     --secondary:#B39969;
     --secondarydark: #A78B58;
@@ -36,7 +36,7 @@ html{
     font-size: 18px;
 }
 body{
-    font-family: var(--font-circularrstd);
+    font-family: var(--font-gilroy);
     font-size: 1rem;
     font-weight: 400;
     color: var(--tertiary);
@@ -45,7 +45,7 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-    font-family: var(--font-circularrstd);
+    font-family: var(--font-gilroy);
     line-height: 1;
 }
 
@@ -76,8 +76,8 @@ h6{
 }
 
 /** Helper CSS **/
-.font-circularrstd{
-    font-family: var(--font-circularrstd);
+.font-gilroy{
+    font-family: var(--font-gilroy);
 }
 
 .text-primary{
