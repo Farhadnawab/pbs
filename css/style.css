@@ -748,16 +748,16 @@ form.raq-form .form-control {
 
     .container{
         max-width: 1600px;
-        padding-left: 3.125rem;
-        padding-right: 3.125rem;
+        padding-left: 2.125rem;
+        padding-right: 2.125rem;
     }
     .container.x2{
-        padding-left: 6.25rem;
-        padding-right: 6.25rem;
+        padding-left: 4.25rem;
+        padding-right: 4.25rem;
     }
     .container.x3{
-        padding-left: 9.375rem;
-        padding-right: 9.375rem;
+        padding-left: 8.375rem;
+        padding-right: 8.375rem;
     }
 
     .long-lasting-listing > [class*=col]{
@@ -768,7 +768,10 @@ form.raq-form .form-control {
 }
 @media only screen and (min-width: 992px){
 
-    
+    .container{
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
     .container.x2{
         padding-left: 6.25rem;
         padding-right: 6.25rem;
