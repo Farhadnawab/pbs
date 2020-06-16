@@ -359,6 +359,7 @@ h6{
     background-position: center top;
 }
 .hero-section .logo{
+    display: inline-block;
     position: absolute;
     top: 2.625rem;
 }
@@ -390,27 +391,24 @@ h6{
 .microbes-section .gradient p {
     margin-top: 2rem;
 }
-.microbes-section .four-col > .col{
-    border: 2px solid #fff;
-    margin-left: -1px;
-    margin-right: -1px;
+.microbes-section .four-col{
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.microbes-section .four-col > [class*=col]{
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
     background: #F2F7FD;
     padding: 5rem 2rem 2rem;
     color: var(--primary);
     line-height: 1.3;
 }
-.microbes-section .four-col > .col:first-child{
-    margin-left: 0;
-}
-.microbes-section .four-col > .col:last-child{
-    margin-right: 0;
-}
-.microbes-section .four-col > .col .box {
+.microbes-section .four-col > [class*=col] .box {
     max-width: 140px;
     margin-left: auto;
     margin-right: auto;
 }
-.microbes-section .four-col > .col img{
+.microbes-section .four-col > [class*=col] img{
     margin-bottom: 2rem;
 }
 
@@ -444,25 +442,22 @@ h6{
     padding-top: 1.5625rem;
     padding-bottom: 9rem;
 }
-.steps-section .three-col > .col{
-    border: 2px solid #fff;
-    margin-left: -1px;
-    margin-right: -1px;
+.steps-section .three-col{
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.steps-section .three-col > [class*=col]{
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
     background: #F2F7FD;
-    padding: 4rem 2rem;
+    padding: 4rem 3rem;
     line-height: 1.3;
     position: relative;
 }
-.steps-section .three-col > .col:first-child{
-    margin-left: 0;
-}
-.steps-section .three-col > .col:last-child{
-    margin-right: 0;
-}
-.steps-section .three-col > .col:not(:last-child):after{
+.steps-section .three-col > [class*=col]:not(:last-child):after{
     content: "";
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     position: absolute;
     z-index: 1;
     top: 300px;
@@ -472,8 +467,9 @@ h6{
     transform: translateX(50%);
     background-image: url("../images/step-arrow.svg");
     background-repeat: no-repeat;
+    background-size: contain;
 }
-.steps-section .three-col > .col .box {
+.steps-section .three-col > [class*=col] .box {
     max-width: 230px;
     margin-left: auto;
     margin-right: auto;
@@ -483,13 +479,14 @@ h6{
     font-weight: 600;
     text-decoration: underline;
 }
-.steps-section .three-col > .col .step-icon{
+.steps-section .three-col > [class*=col] .step-icon{
+    margin-top: 2rem;
+    max-width: 80%;
+}
+.steps-section .three-col > [class*=col] + [class*=col] .step-icon{
     margin-top: 2rem;
 }
-.steps-section .three-col > .col + .col .step-icon{
-    margin-top: 2rem;
-}
-.steps-section .three-col > .col + .col + .col .step-icon{
+.steps-section .three-col > [class*=col] + [class*=col] + [class*=col] .step-icon{
     margin-top: 8rem;
 }
 
@@ -523,14 +520,15 @@ h6{
 .accordion-heading h3 button:after {
     content: "";
     position: absolute;
-    width: 73px;
-    height: 73px;
+    width: 4.4375rem;
+    height: 4.4375rem;
     top: 50%;
     transform: translateY(-50%);
     right: 2.6875rem;
     background-image: url("../images/circlearrow-up-white.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 95%;
 }
 .accordion-heading h3 button.collapsed{
     background: #EDF5FF !important;
@@ -565,11 +563,11 @@ ul.tick-list li {
 }
 ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background: url("../images/tick.png");width: 14px;height: 24px;}
 
-.long-lasting-listing > .col {
+.long-lasting-listing > [class*=col] {
     margin-top: 1rem;
     color: var(--primary);
 }
-.long-lasting-listing > .col img {
+.long-lasting-listing > [class*=col] img {
     margin-bottom: 1rem;
 }
 
@@ -595,7 +593,7 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     margin-left: -2.1875rem;
     margin-right: -2.1875rem;
 }
-.ss-section .ss-listing > .col{
+.ss-section .ss-listing > [class*=col]{
     padding-left: 2.1875rem;
     padding-right: 2.1875rem;
 }
@@ -618,6 +616,8 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     z-index: 1;
 }
 .tos-section > .container {
+    background-size: cover;
+    background-position: center;
     height: 46.25rem;
     padding-bottom: 14.625rem;
     color: #fff;
@@ -630,25 +630,22 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     position: relative;
     z-index: 1;
 }
-.dcsteps-section .two-col > .col{
-    border: 2px solid #fff;
-    margin-left: -1px;
-    margin-right: -1px;
+.dcsteps-section .two-col{
+    border-bottom: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+.dcsteps-section .two-col > [class*=col]{
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
     background: #F2F7FD;
     padding: 4rem 2rem;
     line-height: 1.3;
     position: relative;
 }
-.dcsteps-section .two-col > .col:first-child{
-    margin-left: 0;
-}
-.dcsteps-section .two-col > .col:last-child{
-    margin-right: 0;
-}
-.dcsteps-section .two-col > .col:not(:last-child):after{
+.dcsteps-section .two-col > [class*=col]:not(:last-child):after{
     content: "";
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     position: absolute;
     z-index: 1;
     top: 50%;
@@ -661,8 +658,9 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     transform: translateX(50%);
     background-image: url("../images/step-arrow.svg");
     background-repeat: no-repeat;
+    background-size: contain;
 }
-.dcsteps-section .two-col > .col .box {
+.dcsteps-section .two-col > [class*=col] .box {
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
@@ -672,8 +670,9 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     font-weight: 600;
     text-decoration: underline;
 }
-.dcsteps-section .two-col > .col .step-icon{
+.dcsteps-section .two-col > [class*=col] .step-icon{
     margin-top: 2rem;
+    max-width: 80%;
 }
 
 /*** Quote Section ***/
@@ -703,7 +702,7 @@ form.raq-form .form-control {
 .footer{
     display: flex;
     align-items: flex-end;
-    height: 567px;
+    height: 35.4375rem;
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#00306c+0,032857+100 */
     background: rgb(0,48,108); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(0,48,108,1) 0%, rgba(3,40,87,1) 100%); /* FF3.6-15 */
@@ -730,7 +729,56 @@ form.raq-form .form-control {
 /*********************/
 
 /* Min */
-@media only screen and (min-width: 1200px){
+.container,
+.container.x2,
+.container.x3{
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+}
+@media only screen and (min-width: 480px){
+
+    .container,
+    .container.x2,
+    .container.x3{
+        padding-left: 2.125rem;
+        padding-right: 2.125rem;
+    }
+}
+@media only screen and (min-width: 768px){
+
+    .container{
+        max-width: 1600px;
+        padding-left: 3.125rem;
+        padding-right: 3.125rem;
+    }
+    .container.x2{
+        padding-left: 6.25rem;
+        padding-right: 6.25rem;
+    }
+    .container.x3{
+        padding-left: 9.375rem;
+        padding-right: 9.375rem;
+    }
+
+    .long-lasting-listing > [class*=col]{
+        -ms-flex: 0 0 20%;
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media only screen and (min-width: 992px){
+
+    
+    .container.x2{
+        padding-left: 6.25rem;
+        padding-right: 6.25rem;
+    }
+    .container.x3{
+        padding-left: 9.375rem;
+        padding-right: 9.375rem;
+    }
+}
+@media only screen and (min-width: 1320px){
 
     .container{
         max-width: 1600px;
@@ -750,49 +798,191 @@ form.raq-form .form-control {
 /* Max */
 @media only screen and (max-width: 1400px){
 
-    
+    .steps-section .three-col > [class*=col]:not(:last-child):after,
+    .dcsteps-section .two-col > [class*=col]:not(:last-child):after{
+        width: 5.25rem;
+        height: 5.25rem;
+    }
 
 }
 
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1200px){
 
-    h1{
-        font-size: 3.5rem;
-    }
-    h2{
-        font-size: 2.75rem;
-    }
-    h3{
-        font-size: 1.75rem;
-    }
-    h4{
-        font-size: 1.375rem;
-    }
-    h5{
-        font-size: 1.125rem;
-    }
-    h6{
-        font-size: 1rem;
-    }
+    
+    html{font-size: 14px;}
 }
 
 @media only screen and (max-width: 992px){
 
+    h1{
+        font-size: 4rem;
+    }
+    h2{
+        font-size: 3.25rem; 
+    }
+    h3{
+        font-size: 2.5rem; 
+    }
+    h4{
+        font-size: 1.75rem; 
+    }
+    h5{
+        font-size: 1.375rem; 
+    }
+    h6{
+        font-size: 1rem;
+    }
+
+    form.raq-form{
+        padding: 2.75rem 2.25rem;
+    }
 }
 
 @media only screen and (max-width: 767px){
     
     .btn{
-        padding: 0.625rem;
-        min-width: 100px;
+        min-width: 14.5rem;
     }
 
+    h1{
+        font-size: 3.5rem;
+    }
+    h2{
+        font-size: 2.75rem; 
+    }
+    h3{
+        font-size: 2rem; 
+    }
+    h4{
+        font-size: 1.5rem; 
+    }
+    h5{
+        font-size: 1.375rem; 
+    }
+    h6{
+        font-size: 1rem;
+    }
+
+    .hero-section{
+        height: 60.375rem;
+    }
+    .hero-section .logo{
+        position: static;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    .hero-section > .bg{
+        bottom: 0;
+        top: auto;
+        width: 100%;
+        height: 50%;
+    }
+
+    .looking-for {
+        padding: 3.875rem 0;
+    }
+
+    .pth-section {
+        padding-top: 6.375rem;
+        padding-bottom: 6.375rem;
+    }
+    .pth-section h4{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .steps-section .three-col > [class*=col] .box,
+    .dcsteps-section .two-col > [class*=col] .box{
+        max-width: 100%;
+    }    
+    .steps-section .three-col > [class*=col]:not(:last-child):after,
+    .dcsteps-section .two-col > [class*=col]:not(:last-child):after{
+        top: 100%;
+        left: 50%;
+        right: auto;
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        -moz-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        transform: translateX(-50%) translateY(-50%) rotate(90deg);
+    }
+
+    .accordion-heading h3 button{
+        padding: 1.3rem 4rem 1.3rem 2rem;
+    }
+    .accordion-heading h3 button:after{
+        width: 3rem;
+        height: 3rem;
+        right: 0.6875rem;
+    }
+    .accordion-body{
+        padding: 0 2rem;
+    }
+    .accordion-body .image-column{
+        margin-right: 0;
+    }
+    .accordion-body .text-wrapper {
+        padding: 2rem;
+        max-width: 100%;
+    }
+    
+    .tos-section > .container{
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        max-width: none;
+        height: 35.25rem;
+    }
+    .tos-section > .container > [class*=col]{
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .quote-section{
+        background-size: cover;
+        margin-bottom: 0;
+    }
+    form.raq-form {
+        margin-bottom: -18.125rem;
+    }
 }
 
 @media only screen and (max-width: 575px){
 
+
+    h1{
+        font-size: 3rem;
+    }
+    h2{
+        font-size: 2.5rem; 
+    }
+    h3{
+        font-size: 1.8rem; 
+    }
+    h4{
+        font-size: 1.4rem; 
+    }
+    h5{
+        font-size: 1.2rem; 
+    }
+    h6{
+        font-size: 1rem;
+    }
+
+    .microbes-section .gradient {
+        height: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .tos-section > .container{
+        background-position: right 25% center;
+    }
 }
 
 @media only screen and (max-width: 480px){
     
+    .steps-section .three-col{
+        margin: 0;
+    }
 }
