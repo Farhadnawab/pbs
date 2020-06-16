@@ -891,6 +891,14 @@ form.raq-form .form-control {
         text-align: center;
     }
 
+    .tib-section{
+        padding-bottom: 6rem;
+    }
+
+    .steps-section .three-col > [class*=col] .step-icon,
+    .dcsteps-section .two-col > [class*=col] .step-icon{
+        margin-top: 2rem !important;
+    }
     .steps-section .three-col > [class*=col] .box,
     .dcsteps-section .two-col > [class*=col] .box{
         max-width: 100%;
