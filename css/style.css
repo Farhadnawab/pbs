@@ -383,24 +383,29 @@ h6{
 .microbes-section .gradient p {
     margin-top: 2rem;
 }
-.microbes-section .four-col{
+.microbes-section .four-col .owl-stage{
+    background: #F2F7FD;
+    display: flex;
     border-bottom: 2px solid #fff;
     border-right: 2px solid #fff;
 }
-.microbes-section .four-col > [class*=col]{
+.microbes-section .four-col .item{
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     background: #F2F7FD;
     padding: 5rem 2rem 2rem;
     color: var(--primary);
     line-height: 1.3;
+    width: 100%;
+    height: 100%;
 }
-.microbes-section .four-col > [class*=col] .box {
+.microbes-section .four-col .item .box {
     max-width: 140px;
     margin-left: auto;
     margin-right: auto;
 }
-.microbes-section .four-col > [class*=col] img{
+.microbes-section .four-col .item img{
+    width: auto;
     margin-bottom: 2rem;
 }
 
@@ -460,6 +465,12 @@ h6{
     background-image: url("../images/step-arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.steps-section .three-col > [class*=col]:not(:last-child):hover:after{
+    background-image: url("../images/step-arrowhover.svg");
 }
 .steps-section .three-col > [class*=col] .box {
     max-width: 230px;
@@ -515,13 +526,21 @@ h6{
     width: 4.4375rem;
     height: 4.4375rem;
     top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
     transform: translateY(-50%);
     right: 2.6875rem;
     background-image: url("../images/circlearrow-up-white.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95%;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
 }
+/*.accordion-heading h3 button:not(.collapsed):hover:after{
+    transform: translateY(-50%) rotate(180deg);
+}*/
 .accordion-heading h3 button.collapsed{
     background: #EDF5FF !important;
     border-color: #fff !important;
@@ -529,6 +548,12 @@ h6{
 }
 .accordion-heading h3 button.collapsed:after{
     background-image: url("../images/circlearrow-down-blue.svg");
+}
+.accordion-heading h3 button.collapsed:hover:after{
+    background-image: url("../images/circlearrow-down-bluehover.svg");
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    -moz-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
 }
 
 .accordion-body{
@@ -607,10 +632,10 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     margin-top: -18.375rem;
     position: relative;
     z-index: 1;
-}
-.tos-section > .container {
     background-size: cover;
     background-position: center;
+}
+.tos-section > .container {
     height: 46.25rem;
     padding-bottom: 14.625rem;
     color: #fff;
@@ -652,6 +677,12 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     background-image: url("../images/step-arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+.dcsteps-section .two-col > [class*=col]:not(:last-child):hover:after{
+    background-image: url("../images/step-arrowhover.svg");
 }
 .dcsteps-section .two-col > [class*=col] .box {
     max-width: 360px;
@@ -738,6 +769,9 @@ form.raq-form .form-control {
         padding-left: 2.125rem;
         padding-right: 2.125rem;
     }
+}
+@media only screen and (min-width: 576px){
+
 }
 @media only screen and (min-width: 768px){
 
@@ -944,13 +978,16 @@ form.raq-form .form-control {
         max-width: 100%;
     }
     
-    .tos-section > .container{
-        position: relative;
+    .tos-section{
         width: 100vw;
         left: 50%;
         margin-left: -50vw;
         max-width: none;
+    }
+    .tos-section > .container{
         height: 35.25rem;
+        margin-left: auto;
+        margin-right: auto;
     }
     .tos-section > .container > [class*=col]{
         max-width: 450px;
@@ -1007,7 +1044,7 @@ form.raq-form .form-control {
         padding-bottom: 2rem;
     }
 
-    .tos-section > .container{
+    .tos-section{
         background-position: right 25% center;
     }
 
@@ -1026,6 +1063,37 @@ form.raq-form .form-control {
     }
     .microbes-section .gradient p{
         margin-top: 0;
+    }
+
+    .microbes-section .four-col {
+        padding-top: 5.625rem;
+    }
+    .microbes-section .four-col .owl-stage{
+        align-items: center;
+        background: transparent;
+        border: 0;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+    .microbes-section .four-col .item{
+        border: 0;
+        max-width: 218px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .microbes-section .four-col .owl-item{
+        -webkit-transition: all ease 0.3s;
+        -moz-transition: all ease 0.3s;
+        transition: all ease 0.3s;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        transform: scale(0.7);
+        margin-right: 25px;
+    }
+    .microbes-section .four-col .owl-item.active{
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        transform: scale(1);
     }
 }
 
