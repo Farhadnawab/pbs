@@ -78,7 +78,7 @@ h6{
 }
 
 .main-wrapper{
-    max-width: 1800px;
+    
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
@@ -246,6 +246,10 @@ h6{
     background-position: center;
     color: var(--primary) !important;
 }
+.btn-primary:hover{
+    background-image: url("../images/bluebtn-bghover.png") !important;
+    color: #fff !important;
+}
 .btn-primary:before{
     content: "";
     position: absolute;
@@ -274,16 +278,6 @@ h6{
     -moz-transition: all ease 0.2s;
     transition: all ease 0.2s;
 }
-.btn-primary:hover:before{
-    top: -5px;
-    left: -5px;
-    bottom: -5px;
-}
-.btn-primary:hover:after{
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
-}
 
 
 
@@ -294,8 +288,16 @@ h6{
     background-position: center;
     color: #fff !important;
 }
+.btn-secondary:hover{
+    background-image: url("../images/brownbtn-bghover.png") !important;
+    color: var(--primary) !important;
+}
 .btn-secondary.dark{
     background-image: url("../images/brownbtn-bg2.png");
+}
+.btn-secondary.dark:hover{
+    background-image: url("../images/brownbtn-bghover.png") !important;
+    color: var(--primary) !important;
 }
 .btn-secondary:before{
     content: "";
@@ -324,16 +326,6 @@ h6{
     -webkit-transition: all ease 0.2s;
     -moz-transition: all ease 0.2s;
     transition: all ease 0.2s;
-}
-.btn-secondary:hover:before{
-    top: -5px;
-    left: -5px;
-    bottom: -5px;
-}
-.btn-secondary:hover:after{
-    top: -5px;
-    right: -5px;
-    bottom: -5px;
 }
 
 .whitespace-nowrap{
@@ -554,6 +546,7 @@ h6{
 ul.tick-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 ul.tick-list li {
     font-size: 1.125rem;
@@ -680,8 +673,9 @@ ul.tick-list li:before {content: "";position: absolute;top: 0;left: 0;background
     position: relative;
     z-index: 1;
     padding-top: 6.25rem;
-    margin-bottom: -18.125rem;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
 }
 .quote-section .text-column > *{
     max-width: 27.875rem;
@@ -691,6 +685,7 @@ form.raq-form {
     padding: 3.75rem 4.25rem;
     color: #fff;
     text-align: center;
+    margin-bottom: -18.125rem;
 }
 form.raq-form .form-control {
     border: 0;
@@ -795,6 +790,8 @@ form.raq-form .form-control {
         padding-left: 18.75rem;
         padding-right: 18.75rem;
     }
+
+    
 }
 
 /* Max */
@@ -865,6 +862,16 @@ form.raq-form .form-control {
         font-size: 1rem;
     }
 
+    .btn{
+        background-image: none !important;
+    }
+    .btn.shadow{
+        background-color: transparent !important;
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
     .hero-section{
         height: 60.375rem;
     }
@@ -897,6 +904,9 @@ form.raq-form .form-control {
         padding-bottom: 6rem;
     }
 
+    .steps-section .ps-title h6{
+        color: var(--secondary) !important;
+    }
     .steps-section .three-col > [class*=col] .step-icon,
     .dcsteps-section .two-col > [class*=col] .step-icon{
         margin-top: 2rem !important;
@@ -949,11 +959,23 @@ form.raq-form .form-control {
     }
 
     .quote-section{
-        background-size: cover;
-        margin-bottom: 0;
+        background-size: auto 300px;
+        background-position: center top;
+    }
+    .quote-section .text-column > *{
+        margin-left: auto;
+        margin-right: auto;
     }
     form.raq-form {
-        margin-bottom: -18.125rem;
+        position: relative;
+        width: 100vw;
+        left: 50%;
+        margin-left: -50vw;
+        margin-bottom: 0;
+    }
+
+    .footer{
+        height: auto;
     }
 }
 
@@ -987,6 +1009,23 @@ form.raq-form .form-control {
 
     .tos-section > .container{
         background-position: right 25% center;
+    }
+
+    .microbes-section > .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .microbes-section .gradient{
+        height: auto;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-top: 0;
+    }
+    .microbes-section .gradient h3, .microbes-section .gradient p{
+        max-width: 270px;
+    }
+    .microbes-section .gradient p{
+        margin-top: 0;
     }
 }
 
